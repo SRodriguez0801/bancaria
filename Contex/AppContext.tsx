@@ -21,13 +21,13 @@ export default function AppProvider({ children }: { children: ReactNode }) {
 
     const agregarSaldo = (monto: number) =>{
         setSaldo(saldo + monto);
-        agregarTransaccion(`Deposito de L.${monto}`);
+        agregarTransaccion(`Deposito de $.${monto}`);
     };
 
     const transferirSaldo = (monto: number) =>{
         if(monto <= saldo){
             setSaldo(saldo - monto);
-            agregarTransaccion(`Transferencia de L.${monto}`);
+            agregarTransaccion(`Retiro de $.${monto}`);
             return true; 
             }else {
                 return false;

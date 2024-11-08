@@ -8,8 +8,11 @@ export default function Inicio() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.balanceText}>Saldo Actual: L.{saldo}</Text>
-      <Button title='Depositar L.500' onPress={() =>agregarSaldo(500)}></Button>
+            <Text style={styles.balanceText}>Bienvenido a la Aplicacion </Text>
+            <Text style={styles.balanceText}>De MiBanco erapalo</Text>
+
+      <Text style={styles.balanceText}>Saldo Actual: $.{saldo}</Text>
+      <Button title='Depositar $.500' onPress={() =>agregarSaldo(500)}></Button>
    <Text style={styles.balanceText} > Historial de Transacciones</Text>
    <FlatList data={transacciones} keyExtractor={(item) => item.id} renderItem={({item}) => (<Text style={styles.balanceText} >{item.detalle}</Text>)}></FlatList>
     </View>
